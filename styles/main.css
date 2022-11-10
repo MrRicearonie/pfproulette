@@ -71,9 +71,10 @@ h1 {
 }
 
 #home .button-container:focus {
-    color:chartreuse;
+    color:whitesmoke;
     background-clip: border-box;
     border-image: whitesmoke;
+    transform: scale(0.95) translateY(5px);
 }
 
 
