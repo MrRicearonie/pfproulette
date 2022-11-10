@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 10vw;
+    background-color: #fff;
+    cursor: default;
+    margin: 0;
+}
+
+.container {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.unselectable {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+#home .container {
+    background-image: url(../images/picture1.jpg);
+}
+
+#home .button-container {
+    width: 175px;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-width: 6px;
+    border-style: solid;
+    border-image: linear-gradient(137deg, rgba(233,91,91,1) 0%, rgba(253,184,45,1) 100%) 1;
+
+    background-image: rgb(233,91,91);
+    background-image: linear-gradient(137deg, rgba(233,91,91,1) 0%, rgba(253,184,45,1) 100%);
+    background-clip: text;
+    color: transparent;
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+
+    transition: all 0.5s; /* vendorless fallback */
+    -o-transition: all 0.5s; /* opera */
+    -ms-transition: all 0.5s; /* IE 10 */
+    -moz-transition: all 0.5s; /* Firefox */
+    -webkit-transition: all 0.5s; /*safari and chrome */
+}
+
+#home .button-container:hover {
+    color: whitesmoke;
+    background-clip: border-box;
+    border-image: whitesmoke;
+    transform: scale(1.05);
+}
+
+#home .button-container:active {
+    transform: scale(0.95) translateY(5px);
+}
