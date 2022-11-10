@@ -59,18 +59,21 @@ h1 {
     -webkit-transition: all 0.5s; /*safari and chrome */
 }
 
-/* #home .button-container:hover {
+#home .button-container:hover {
     color: whitesmoke;
     background-clip: border-box;
     border-image: whitesmoke;
     transform: scale(1.05);
-} */
+}
 
 #home .button-container:active {
-    color: whitesmoke;
+    transform: scale(0.95) translateY(5px);
+}
+
+#home .button-container:focus {
+    color:chartreuse;
     background-clip: border-box;
     border-image: whitesmoke;
-    transform: scale(0.95) translateY(5px);
 }
 
 
