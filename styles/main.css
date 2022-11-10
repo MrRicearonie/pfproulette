@@ -66,6 +66,6 @@ h1 {
     transform: scale(1.05);
 }
 
-#home .button-container:active {
+#home .button-container:hover #home .button-container:active {
     transform: scale(0.95) translateY(5px);
 }
