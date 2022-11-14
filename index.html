@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
     <script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/8c59af42f3.js" crossorigin="anonymous"></script>
     <title>pfproulette - your next profile picture</title>
 </head>
 <body>
@@ -28,7 +29,14 @@
             </div>
         </div>
         <div id="side-bar">
-
+            <div class="side-container">
+                <h2><span>CONGRATS!</span></h2>
+                <div class="button-container">
+                    <button id="download">DOWNLOAD PIC</button>
+                    <button id="spin-again" role="button" onclick="respin()">SPIN AGAIN</button>
+                </div>
+                <p id="made-with">Made with <i class="fa-solid fa-heart"></i> by <a href="https://crrempe.com" class="text_color3">Christopher Rempe</a></p>
+            </div>
         </div>
     </div>
 </body>

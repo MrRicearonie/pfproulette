@@ -20,12 +20,18 @@ $(document).ready(function () {
 // Start the spin! Gets the first displayed photo, then calls spinRandom with
 // a random number of spins
 function spin() {
+  console.log('Hello')
   var spinPhoto1 = dir + 'picture' + (getRandomInt(4, 0) + 1) + fileExtension
+  var spinNum = getRandomInt(10, 5)
   $('#spin-box').append($('<img>',{id:'img1',class:'profileImg',src:spinPhoto1}))
+  $('#spin-box').get(0).style.setProperty("--scaleTime", ((spinNum+4)*0.35)+"s")
+  $('#spin-box').css('transform', "scale(1.5)")
+
+  console.log(spinNum)
 
   setTimeout(function () {
     $('#img1').css("margin-top", '0')
-    spinRandom(getRandomInt(25, 5))
+    spinRandom(spinNum)
   }, 250)
 }
 
@@ -38,6 +44,8 @@ function spinRandom(spinsLeft) {
   $('#spin-box').append($('<img>',{id:imgId,class:'profileImg',src:picture}))
   spinsLeft = spinsLeft - 1
 
+  console.log(spinsLeft)
+
   // Wait for 350ms before having image pop up
   setTimeout(function () {
     $('#'+imgId).css("margin-top", "0")
@@ -45,8 +53,19 @@ function spinRandom(spinsLeft) {
     // If there are more spins left, repeat
     if (spinsLeft > 0) {
       spinRandom(spinsLeft)
+    } else {
+      endSpin()
     }
   },350)
+}
+
+function endSpin() {
+  setTimeout(() => {
+    $('#spin-screen').get(0).style.setProperty("--spinWidth", "calc(100vw - 250px)")
+    $('#spin-screen').css('margin-left', '250px')
+    $('#side-bar').css('transform', 'translateX(0)')
+    $('#side-bar h2').css('transform', 'translateX(0)')
+  }, 1500)
 }
 
 // When the user clicks the first spin button, bring up the spin container,
@@ -57,4 +76,21 @@ function firstSpin() {
     $('#spin-container').removeClass('spin-container-transition')
     spin()
   }, 750)
+}
+
+function respin() {
+  $('#spin-screen').get(0).style.setProperty("--spinWidth", "100vw")
+  $('#spin-screen').css('margin-left', '0')
+  $('#side-bar').css('transform', 'translateX(-250px)')
+  $('#side-bar h2').css('transform', 'translateX(-75px)')
+  setTimeout(() => {
+    $('#spin-box').get(0).style.setProperty("--scaleTime", '0.75s')
+    $('#spin-box').css('transform', 'scale(0.01)')
+    setTimeout(() => {
+      $('#spin-box').empty()
+      $('#spin-box').get(0).style.setProperty("--scaleTime", '0s')
+      spin()
+    }, 750)
+  }, 750)
+
 }
