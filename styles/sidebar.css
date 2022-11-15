@@ -7,11 +7,11 @@ h3 {
 }
 
 .transition-default {
-    transition: all 0.75s; /* vendorless fallback */
-    -o-transition: all 0.75s; /* opera */
-    -ms-transition: all 0.75s; /* IE 10 */
-    -moz-transition: all 0.75s; /* Firefox */
-    -webkit-transition: all 0.75s; /*safari and chrome */
+    transition: all 0.75s ease; /* vendorless fallback */
+    -o-transition: all 0.75s ease; /* opera */
+    -ms-transition: all 0.75s ease; /* IE 10 */
+    -moz-transition: all 0.75s ease; /* Firefox */
+    -webkit-transition: all 0.75s ease; /*safari and chrome */
 }
 
 #side-bar {
@@ -60,14 +60,15 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 #download-button:before {
     background: linear-gradient(
         125deg,
         #000 0%,
-        #b5e95b 75%,
-        #2dfdf5 100%
+        #e95b5b 75%,
+        #fdb82e 100%
     );
     background-position: 0% 0%;
     background-size: 400% 100%;
@@ -96,14 +97,14 @@ h3 {
 }
 
 #download-button:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 #download-button:hover .button-inside {
     background-color: transparent;
 }
 
-.button-inside {
+#download-button .button-inside {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,6 +114,24 @@ h3 {
     color: #000;
 
     background-color: #fff;
+}
+
+#spin-again {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 80%;
+}
+
+#spin-again:hover {
+    background-color: #000;
+    color: #fff;
 }
 
 #made-with {

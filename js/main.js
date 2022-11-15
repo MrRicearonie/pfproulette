@@ -11,10 +11,9 @@ function getRandomInt(max, min) {
 
 // When the site loads, choose a random image for the background
 $(document).ready(function () {
-    var num1 = getRandomInt(11, 0) + 1
-    console.log(num1)
-    $('#home .container').css('background-image', 'url(' + dir + 'picture' + num1 + '.jpg)')
-
+  var num1 = getRandomInt(11, 0) + 1
+  console.log(num1)
+  $('#home .container').css('background-image', 'url(' + dir + 'picture' + num1 + '.jpg)')
 })
 
 // Start the spin! Gets the first displayed photo, then calls spinRandom with
@@ -59,13 +58,16 @@ function spinRandom(spinsLeft) {
   },350)
 }
 
+// Things to do after the spin is finished (show the side bar)
 function endSpin() {
   setTimeout(() => {
     $('#download-button').attr('href', picture.substring(1, picture.length))
     $('#spin-screen').get(0).style.setProperty("--spinWidth", "calc(100vw - 250px)")
     $('#spin-screen').css('margin-left', '250px')
     $('#side-bar').css('transform', 'translateX(0)')
-    $('#side-bar h2').css('transform', 'translateX(0)')
+    setTimeout(() => {
+      $('#side-bar h2').css('transform', 'translateX(0)')
+    }, 250)
   }, 1500)
 }
 
