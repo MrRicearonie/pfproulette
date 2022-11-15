@@ -12,6 +12,10 @@ h1 {
     margin: 0;
 }
 
+.hidden {
+    display: none;
+}
+
 .container {
     position: fixed;
     height: 100vh;

@@ -60,6 +60,7 @@ function spinRandom(spinsLeft) {
 
 // Things to do after the spin is finished (show the side bar)
 function endSpin() {
+  $('#side-bar').removeClass('hidden')
   setTimeout(() => {
     $('#download-button').attr('href', picture.substring(1, picture.length))
     $('#spin-screen').get(0).style.setProperty("--spinWidth", "calc(100vw - 250px)")
@@ -74,9 +75,10 @@ function endSpin() {
 // When the user clicks the first spin button, bring up the spin container,
 // then spin
 function firstSpin() {
-  $('#spin-container').addClass('spin-container-up')
+  $('#spin-container').addClass('spin-container-up').removeClass('hidden')
   setTimeout(function () {
     $('#spin-container').removeClass('spin-container-transition')
+    $('#home').addClass('hidden')
     spin()
   }, 750)
 }
@@ -92,6 +94,7 @@ function respin() {
     setTimeout(() => {
       $('#spin-box').empty()
       $('#spin-box').get(0).style.setProperty("--scaleTime", '0s')
+      $('#side-bar').addClass('hidden')
       spin()
     }, 750)
   }, 750)
