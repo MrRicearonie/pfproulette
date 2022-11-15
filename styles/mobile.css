@@ -1,0 +1,46 @@
+@media screen and (max-width: 500px) {
+    #spin-screen {
+        width: 100vw;
+    }
+
+    .spin-screen-end {
+        height: 50vh !important;
+        margin-left: 0;
+    }    
+
+    #side-bar {
+        height: 50vh;
+        width: 100vw;
+    }
+
+    .position-side {
+        transform: translateY(100vh);
+    }
+
+    .position-side-end {
+        transform: translateY(50vh);
+    }
+
+    #side-bar .button-container {
+        height: 50vh;
+    }
+
+    #side-bar h2 {
+        padding: 5px;
+        margin: 0;
+        left: calc(5vw - 5px);
+    }
+
+    .position-h2 {
+        transform: translateX(0px);
+        transform: translateY(25px);
+    }
+
+    .position-h2-end {
+        transform: translateY(-25px);
+    }
+
+    #made-with {
+        top: calc(100% - 75px);
+    }
+}

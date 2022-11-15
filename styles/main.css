@@ -113,6 +113,10 @@ h1 {
     -webkit-transition: all 0.75s; /*safari and chrome */
 }
 
+.spin-screen-end {
+    margin-left: 250px;
+}
+
 #spin-box {
     --scaleTime: 0s;
     width: max(min(25vw, 25vh), 128px);

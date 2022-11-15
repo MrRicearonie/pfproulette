@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/sidebar.css">
+    <link rel="stylesheet" href="./styles/mobile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
@@ -29,9 +30,9 @@
 
             </div>
         </div>
-        <div id="side-bar" class="transition-default">
+        <div id="side-bar" class="transition-default position-side">
             <div class="side-container">
-                <h2 class="transition-default"><span>CONGRATS!</span></h2>
+                <h2 class="transition-default position-h2"><span>CONGRATS!</span></h2>
                 <div class="button-container">
                     <a id="download-button" class="transition-default" href="" download="profilePicture.jpg">
                         <div class="button-inside transition-default">
@@ -40,7 +41,9 @@
                     </a>
                     <div id="spin-again" class="unselectable transition-default" onclick="respin()">SPIN AGAIN</div>
                 </div>
-                <p id="made-with">Made with <i class="fa-solid fa-heart"></i> by <a href="https://crrempe.com" class="text_color3">Christopher Rempe</a></p>
+                <div class="flex-container">
+                    <p id="made-with">Made with <i class="fa-solid fa-heart"></i> by <a href="https://crrempe.com" class="text_color3">Christopher Rempe</a></p>
+                </div>
             </div>
         </div>
     </div>

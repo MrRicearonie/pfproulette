@@ -63,10 +63,10 @@ function endSpin() {
   setTimeout(() => {
     $('#download-button').attr('href', picture.substring(1, picture.length))
     $('#spin-screen').get(0).style.setProperty("--spinWidth", "calc(100vw - 250px)")
-    $('#spin-screen').css('margin-left', '250px')
-    $('#side-bar').css('transform', 'translateX(0)')
+    $('#spin-screen').addClass('spin-screen-end')
+    $('#side-bar').addClass('position-side-end')
     setTimeout(() => {
-      $('#side-bar h2').css('transform', 'translateX(0)')
+      $('#side-bar h2').addClass('position-h2-end')
     }, 250)
   }, 1500)
 }
@@ -83,9 +83,9 @@ function firstSpin() {
 
 function respin() {
   $('#spin-screen').get(0).style.setProperty("--spinWidth", "100vw")
-  $('#spin-screen').css('margin-left', '0')
-  $('#side-bar').css('transform', 'translateX(-250px)')
-  $('#side-bar h2').css('transform', 'translateX(-75px)')
+  $('#spin-screen').removeClass('spin-screen-end')
+  $('#side-bar').removeClass('position-side-end')
+  $('#side-bar h2').removeClass('position-h2-end')
   setTimeout(() => {
     $('#spin-box').get(0).style.setProperty("--scaleTime", '0.75s')
     $('#spin-box').css('transform', 'scale(0.01)')

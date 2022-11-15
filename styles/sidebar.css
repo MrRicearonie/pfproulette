@@ -18,11 +18,16 @@ h3 {
     position: fixed;
     height: 100vh;
     top: 0;
-    
-    transform: translateX(-250px);
-
     background-color: #fff;
     width: 250px;
+}
+
+.position-side {
+    transform: translateX(-250px);
+}
+
+.position-side-end {
+    transform: translateX(0);
 }
 
 .side-container {
@@ -42,10 +47,16 @@ h3 {
     background-color: black;
     color: #fff;
 
-    transform: translateX(-75px);
-
     font-weight: 800;
     font-size: 35px;
+}
+
+.position-h2 {
+    transform: translateX(-75px);
+}
+
+.position-h2-end {
+    transform: translateX(0);
 }
 
 #side-bar span {
@@ -134,9 +145,15 @@ h3 {
     color: #fff;
 }
 
+.flex-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 #made-with {
     position: absolute;
-    top: calc(100vh - 100px);
+    top: calc(100% - 100px);
     padding: 5px;
     text-align: center;
 }
