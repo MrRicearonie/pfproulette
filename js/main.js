@@ -23,7 +23,7 @@ function spin() {
   console.log('Hello')
   var spinPhoto1 = dir + 'picture' + (getRandomInt(11, 0) + 1) + fileExtension
   var spinNum = getRandomInt(10, 5)
-  $('#spin-box').append($('<img>',{id:'img1',class:'profileImg',src:spinPhoto1}))
+  $('#spin-box').append($('<img>',{id:'img'+(spinNum+1),class:'profileImg',src:spinPhoto1}))
   $('#spin-box').get(0).style.setProperty("--scaleTime", ((spinNum+4)*0.35)+"s")
   $('#spin-box').css('transform', "scale(1.5)")
 
@@ -61,6 +61,7 @@ function spinRandom(spinsLeft) {
 
 function endSpin() {
   setTimeout(() => {
+    $('#download-button').attr('href', picture.substring(1, picture.length))
     $('#spin-screen').get(0).style.setProperty("--spinWidth", "calc(100vw - 250px)")
     $('#spin-screen').css('margin-left', '250px')
     $('#side-bar').css('transform', 'translateX(0)')
