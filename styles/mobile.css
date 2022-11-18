@@ -1,8 +1,12 @@
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 501px) {
     body {
-        padding-bottom: env(safe-area-inset-bottom);
+        margin: 0;
+        padding: 0;
     }
-    
+}
+
+@media screen and (max-width: 500px) {
+
     #spin-screen {
         width: 100vw;
     }
