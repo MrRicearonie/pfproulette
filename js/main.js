@@ -11,7 +11,7 @@ function getRandomInt(max, min) {
 
 // When the site loads, choose a random image for the background
 $(document).ready(function () {
-  var num1 = getRandomInt(11, 0) + 1
+  var num1 = getRandomInt(24, 0) + 1
   console.log(num1)
   $('#home .container').css('background-image', 'url(' + dir + 'picture' + num1 + '.jpg)')
 })
@@ -20,7 +20,7 @@ $(document).ready(function () {
 // a random number of spins
 function spin() {
   console.log('Hello')
-  var spinPhoto1 = dir + 'picture' + (getRandomInt(11, 0) + 1) + fileExtension
+  var spinPhoto1 = dir + 'picture' + (getRandomInt(24, 0) + 1) + fileExtension
   var spinNum = getRandomInt(10, 5)
   $('#spin-box').append($('<img>',{id:'img'+(spinNum+1),class:'profileImg',src:spinPhoto1}))
   $('#spin-box').get(0).style.setProperty("--scaleTime", ((spinNum+4)*0.35)+"s")
@@ -39,7 +39,7 @@ function spinRandom(spinsLeft) {
 
   // Create the id for the image, get a random image, and add it to the DOM
   var imgId = "img" + spinsLeft
-  picture = dir + 'picture' + (getRandomInt(11, 0) + 1) + fileExtension
+  picture = dir + 'picture' + (getRandomInt(24, 0) + 1) + fileExtension
   $('#spin-box').append($('<img>',{id:imgId,class:'profileImg',src:picture}))
   spinsLeft = spinsLeft - 1
 
