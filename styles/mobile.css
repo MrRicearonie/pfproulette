@@ -1,4 +1,8 @@
 @media screen and (max-width: 500px) {
+    body {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+    
     #spin-screen {
         width: 100vw;
     }
@@ -41,7 +45,6 @@
     }
 
     #made-with {
-        position: relative;
-        top: calc(100% - 100px);
+        top: calc(100% - 75px);
     }
 }
