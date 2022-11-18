@@ -1,15 +1,16 @@
 @media screen and (max-width: 500px) {
     #spin-screen {
+        --mobileHeight: 50vh;
         width: 100vw;
     }
 
     .spin-screen-end {
-        height: 50vh !important;
+        height: var(--mobileHeight) !important;
         margin-left: 0;
     }    
 
     #side-bar {
-        height: 50vh;
+        height: var(--mobileHeight);
         width: 100vw;
     }
 
@@ -18,11 +19,11 @@
     }
 
     .position-side-end {
-        transform: translateY(50vh);
+        transform: translateY(var(--mobileHeight));
     }
 
     #side-bar .button-container {
-        height: 50vh;
+        height: var(--mobileHeight);
     }
 
     #side-bar h2 {
