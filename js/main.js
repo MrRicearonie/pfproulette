@@ -11,7 +11,8 @@ function getRandomInt(max, min) {
 
 // When the site loads, choose a random image for the background
 $(document).ready(function () {
-  $('#spin-screen').get(0).style.setProperty("--mobileHeight", window.innerHeight)
+  $('#spin-container').get(0).style.setProperty("--mobileHeight", (window.innerHeight/2)+'px')
+  console.log(window.innerHeight)
   var num1 = getRandomInt(24, 0) + 1
   console.log(num1)
   $('#home .container').css('background-image', 'url(' + dir + 'picture' + num1 + '.jpg)')

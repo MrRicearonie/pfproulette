@@ -1,6 +1,9 @@
 @media screen and (max-width: 500px) {
-    #spin-screen {
+    #spin-container {
         --mobileHeight: 50vh;
+    }
+    
+    #spin-screen {
         width: 100vw;
     }
 
