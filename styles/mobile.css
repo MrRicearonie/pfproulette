@@ -11,6 +11,7 @@
     #side-bar {
         height: 50vh;
         width: 100vw;
+        overflow-y: scroll;
     }
 
     .position-side {
