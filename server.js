@@ -11,10 +11,10 @@ const urls = [
 
 
 // Static Files
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/styles', express.static(path.join(__dirname + 'public/styles')));
-app.use('/js', express.static(path.join(__dirname + 'public/js')));
-app.use('/images', express.static(path.join(__dirname + 'public/images')));
+app.use(express.static(__dirname + '/public'));
+app.use('/styles', express.static(__dirname + 'public/styles'));
+app.use('/js', express.static(__dirname + 'public/js'));
+app.use('/images', express.static(__dirname + 'public/images'));
 
 
 // Create an array with the images folder
