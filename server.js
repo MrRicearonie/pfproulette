@@ -18,7 +18,7 @@ app.use('/images', express.static(__dirname + 'public/images'));
 
 
 // Create an array with the images folder
-var dir = 'images/'
+var dir = 'public/images/'
 var files = []
 
 fs.readdirSync(dir).forEach(file => {
