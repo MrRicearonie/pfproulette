@@ -87,12 +87,15 @@ function endSpin() {
 // When the user clicks the first spin button, bring up the spin container,
 // then spin
 function firstSpin() {
-  $('#spin-container').addClass('spin-container-up').removeClass('hidden')
+  $('#spin-container').removeClass('hidden')
   setTimeout(function () {
-    $('#spin-container').removeClass('spin-container-transition')
-    $('#home').addClass('hidden')
-    spin()
-  }, 750)
+    $('#spin-container').addClass('spin-container-up')
+    setTimeout(function () {
+      $('#spin-container').removeClass('spin-container-transition')
+      $('#home').addClass('hidden')
+      spin()
+    }, 750)
+  }, 1)
 }
 
 function respin() {
